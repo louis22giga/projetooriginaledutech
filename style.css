@@ -164,7 +164,7 @@ nav a:hover {
 .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
-        url("cristiano.jpg");
+        url("Cristiano.jpg");
     background-size: cover;
     background-position: center;
 }
