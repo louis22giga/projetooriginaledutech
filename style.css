@@ -39,6 +39,10 @@ button {
     cursor: pointer;
 }
 
+/* =========================================================
+   EFEITO DE RUÍDO
+========================================================= */
+
 .noise {
     position: fixed;
     inset: 0;
@@ -47,6 +51,10 @@ button {
     opacity: .045;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
+
+/* =========================================================
+   TOPO / MENU
+========================================================= */
 
 .topbar {
     position: fixed;
@@ -99,6 +107,10 @@ nav a:hover {
     font-size: 27px;
 }
 
+/* =========================================================
+   ÍNDICE LATERAL
+========================================================= */
+
 .side-index {
     position: fixed;
     right: 25px;
@@ -124,6 +136,10 @@ nav a:hover {
     color: white;
     border-left-color: var(--brown-light);
 }
+
+/* =========================================================
+   ESTRUTURA GERAL
+========================================================= */
 
 .slide {
     position: relative;
@@ -155,10 +171,11 @@ nav a:hover {
     font: 800 13px 'Montserrat', sans-serif;
 }
 
-/* CAPA */
+/* =========================================================
+   CAPA
+========================================================= */
 
 .cover {
-  .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
         url("images.jpeg");
@@ -166,14 +183,17 @@ nav a:hover {
     background-position: center;
 }
 
-}
-
 .cover::before {
     content: "";
     position: absolute;
     inset: 0;
     background:
-        repeating-linear-gradient(76deg, transparent 0 110px, rgba(255,255,255,.13) 111px 114px, transparent 115px 205px);
+        repeating-linear-gradient(
+            76deg,
+            transparent 0 110px,
+            rgba(255,255,255,.13) 111px 114px,
+            transparent 115px 205px
+        );
     opacity: .35;
 }
 
@@ -267,16 +287,21 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(145deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
-        url("Cristiano.jpg");
+        url("images (1).jpeg");
     background-size: cover;
     background-position: center;
-    clip-path: polygon(28% 0,100% 0,78% 100%,0 100%);
+    clip-path: polygon(
+        28% 0,
+        100% 0,
+        78% 100%,
+        0 100%
+    );
     display: grid;
     place-items: center;
     text-align: center;
 }
 
-.image-note { 
+.image-note {
     padding: 9px 12px;
     background: rgba(0,0,0,.62);
     color: rgba(255,255,255,.75);
@@ -286,12 +311,19 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* INTRODUÇÃO */
+/* =========================================================
+   INTRODUÇÃO
+   IMAGEM: images.jpg
+========================================================= */
 
 .split-slide {
     background:
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("ney.webp");
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.8)
+        ),
+        url("images.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -301,7 +333,7 @@ nav a:hover {
     left: -2%;
     bottom: -8%;
     color: rgba(255,255,255,.035);
-    font: 900 25vw/1 'Barlow Condensed';
+    font: 900 25vw/1 'Barlow Condensed', sans-serif;
 }
 
 .diagonal-panel {
@@ -310,7 +342,11 @@ nav a:hover {
     top: -8%;
     width: 23%;
     height: 120%;
-    background: linear-gradient(130deg, #1d0f0c, var(--brown));
+    background: linear-gradient(
+        130deg,
+        #1d0f0c,
+        var(--brown)
+    );
     transform: skewX(-17deg);
     opacity: .92;
 }
@@ -322,7 +358,12 @@ nav a:hover {
     width: 43%;
     height: 35%;
     background: url("../images/pista.jpg") center/cover;
-    clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
+    clip-path: polygon(
+        15% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
     display: grid;
     place-items: center;
 }
@@ -340,7 +381,7 @@ nav a:hover {
 .recovery-panel h2,
 .prevention-content h2,
 .performance-content h2 {
-    font: 900 clamp(55px, 7vw, 105px)/.8 'Barlow Condensed';
+    font: 900 clamp(55px, 7vw, 105px)/.8 'Barlow Condensed', sans-serif;
     letter-spacing: -2px;
 }
 
@@ -371,7 +412,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* NUTRIÇÃO */
+/* =========================================================
+   NUTRIÇÃO
+========================================================= */
 
 .topic-slide {
     background: #0a0807;
@@ -397,14 +440,22 @@ nav a:hover {
     width: 44%;
     height: 78%;
     background:
-        linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.05)),
-        url("images\ \(1\).jpeg") center/cover;
-    clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.05)
+        ),
+        url("images (1).jpeg") center/cover;
+    clip-path: polygon(
+        0 0,
+        78% 0,
+        100% 100%,
+        0 100%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 .topic-content {
     position: absolute;
@@ -455,7 +506,7 @@ nav a:hover {
 }
 
 .topic-card b {
-    font: 800 23px 'Barlow Condensed';
+    font: 800 23px 'Barlow Condensed', sans-serif;
 }
 
 .topic-card small {
@@ -464,7 +515,9 @@ nav a:hover {
     font-size: 9px;
 }
 
-/* HIDRATAÇÃO */
+/* =========================================================
+   HIDRATAÇÃO
+========================================================= */
 
 .hydration-slide {
     background: #05090b;
@@ -474,7 +527,11 @@ nav a:hover {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.48)),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.48)
+        ),
         url("../images/hidratacao.jpg") center/cover;
 }
 
@@ -498,7 +555,7 @@ nav a:hover {
 }
 
 .hydration-content h2 {
-    font: 900 clamp(65px, 9vw, 130px)/.8 'Barlow Condensed';
+    font: 900 clamp(65px, 9vw, 130px)/.8 'Barlow Condensed', sans-serif;
 }
 
 .hydration-content > p:not(.mini-title):not(.section-number) {
@@ -514,11 +571,11 @@ nav a:hover {
 }
 
 .water-value {
-    font: 900 clamp(55px, 7vw, 95px)/1 'Barlow Condensed';
+    font: 900 clamp(55px, 7vw, 95px)/1 'Barlow Condensed', sans-serif;
 }
 
 .water-value small {
-    font: 700 14px 'Montserrat';
+    font: 700 14px 'Montserrat', sans-serif;
     color: var(--brown-light);
 }
 
@@ -569,7 +626,10 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* RECUPERAÇÃO */
+/* =========================================================
+   RECUPERAÇÃO
+   IMAGEM: ney.webp
+========================================================= */
 
 .recovery-slide {
     background: #090807;
@@ -582,9 +642,18 @@ nav a:hover {
     width: 50%;
     height: 100%;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,.8)),
-        url("ney.webp");
-    clip-path: polygon(0 0,85% 0,100% 100%,0 100%);
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.8)
+        ),
+        url("ney.webp") center/cover;
+    clip-path: polygon(
+        0 0,
+        85% 0,
+        100% 100%,
+        0 100%
+    );
     display: grid;
     place-items: center;
 }
@@ -629,7 +698,9 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* PREVENÇÃO */
+/* =========================================================
+   PREVENÇÃO
+========================================================= */
 
 .prevention-slide {
     background: #0b0908;
@@ -639,7 +710,11 @@ nav a:hover {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.5)),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.93),
+            rgba(0,0,0,.5)
+        ),
         url("../images/esporte.jpg") center/cover;
 }
 
@@ -664,13 +739,44 @@ nav a:hover {
     margin-top: 15px;
     margin-left: 40px;
     background:
-        radial-gradient(circle at 50% 15%, #8d4a3f 0 20px, transparent 21px),
-        linear-gradient(#8d4a3f 0 0) center 25px/18px 125px no-repeat,
-        linear-gradient(35deg, transparent 44%, #8d4a3f 45% 52%, transparent 53%) 40px 45px/90px 90px no-repeat,
-        linear-gradient(-35deg, transparent 44%, #8d4a3f 45% 52%, transparent 53%) 120px 45px/90px 90px no-repeat,
-        linear-gradient(35deg, transparent 45%, #8d4a3f 46% 53%, transparent 54%) 70px 125px/55px 145px no-repeat,
-        linear-gradient(-35deg, transparent 45%, #8d4a3f 46% 53%, transparent 54%) 125px 125px/55px 145px no-repeat;
-    filter: drop-shadow(0 0 20px rgba(143,73,62,.3));
+        radial-gradient(
+            circle at 50% 15%,
+            #8d4a3f 0 20px,
+            transparent 21px
+        ),
+        linear-gradient(#8d4a3f 0 0)
+            center 25px/18px 125px no-repeat,
+        linear-gradient(
+            35deg,
+            transparent 44%,
+            #8d4a3f 45% 52%,
+            transparent 53%
+        )
+            40px 45px/90px 90px no-repeat,
+        linear-gradient(
+            -35deg,
+            transparent 44%,
+            #8d4a3f 45% 52%,
+            transparent 53%
+        )
+            120px 45px/90px 90px no-repeat,
+        linear-gradient(
+            35deg,
+            transparent 45%,
+            #8d4a3f 46% 53%,
+            transparent 54%
+        )
+            70px 125px/55px 145px no-repeat,
+        linear-gradient(
+            -35deg,
+            transparent 45%,
+            #8d4a3f 46% 53%,
+            transparent 54%
+        )
+            125px 125px/55px 145px no-repeat;
+    filter: drop-shadow(
+        0 0 20px rgba(143,73,62,.3)
+    );
 }
 
 .body-part {
@@ -692,10 +798,25 @@ nav a:hover {
     color: white;
 }
 
-.head { top: 12%; left: 46%; }
-.shoulder { top: 28%; left: 27%; }
-.knee { bottom: 24%; left: 39%; }
-.ankle { bottom: 6%; left: 59%; }
+.head {
+    top: 12%;
+    left: 46%;
+}
+
+.shoulder {
+    top: 28%;
+    left: 27%;
+}
+
+.knee {
+    bottom: 24%;
+    left: 39%;
+}
+
+.ankle {
+    bottom: 6%;
+    left: 59%;
+}
 
 .body-info {
     position: absolute;
@@ -729,14 +850,25 @@ nav a:hover {
     width: 42%;
     height: 70%;
     background:
-        linear-gradient(0deg, rgba(0,0,0,.75), transparent),
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,.75),
+            transparent
+        ),
         url("../images/esporte.jpg") center/cover;
-    clip-path: polygon(18% 0,100% 0,100% 100%,0 100%);
+    clip-path: polygon(
+        18% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
     display: grid;
     place-items: center;
 }
 
-/* DESEMPENHO */
+/* =========================================================
+   DESEMPENHO
+========================================================= */
 
 .performance-slide {
     background: #0b0908;
@@ -746,7 +878,11 @@ nav a:hover {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.72)),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.94),
+            rgba(0,0,0,.72)
+        ),
         url("../images/treino.jpg") center/cover;
 }
 
@@ -842,7 +978,7 @@ nav a:hover {
 .result-box strong {
     margin-top: 7px;
     color: var(--brown-light);
-    font: 800 27px 'Barlow Condensed';
+    font: 800 27px 'Barlow Condensed', sans-serif;
 }
 
 .final-message {
@@ -868,10 +1004,12 @@ nav a:hover {
 
 .final-message b {
     margin-top: 10px;
-    font: 700 25px/1 'Barlow Condensed';
+    font: 700 25px/1 'Barlow Condensed', sans-serif;
 }
 
-/* MODAL */
+/* =========================================================
+   MODAL
+========================================================= */
 
 .modal {
     position: fixed;
@@ -899,7 +1037,7 @@ nav a:hover {
 
 .modal-window h3 {
     margin-bottom: 18px;
-    font: 900 50px/.9 'Barlow Condensed';
+    font: 900 50px/.9 'Barlow Condensed', sans-serif;
 }
 
 .modal-window p:last-child {
@@ -918,9 +1056,12 @@ nav a:hover {
     font-size: 30px;
 }
 
-/* RESPONSIVIDADE */
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+========================================================= */
 
 @media (max-width: 900px) {
+
     nav {
         gap: 10px;
     }
@@ -940,7 +1081,12 @@ nav a:hover {
     }
 }
 
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+========================================================= */
+
 @media (max-width: 700px) {
+
     .topbar {
         padding: 18px 5%;
     }
@@ -974,6 +1120,8 @@ nav a:hover {
         min-height: 850px;
     }
 
+    /* CAPA */
+
     .cover-content {
         left: 7%;
         top: 43%;
@@ -994,6 +1142,8 @@ nav a:hover {
         width: 60%;
     }
 
+    /* INTRODUÇÃO */
+
     .split-title {
         top: 30%;
     }
@@ -1013,6 +1163,8 @@ nav a:hover {
         top: 55%;
         width: 84%;
     }
+
+    /* NUTRIÇÃO / RECUPERAÇÃO / PREVENÇÃO */
 
     .topic-image,
     .recovery-photo,
@@ -1046,13 +1198,19 @@ nav a:hover {
         flex-wrap: wrap;
     }
 
+    /* HIDRATAÇÃO */
+
     .hydration-shape {
         width: 60%;
     }
 
+    /* RECUPERAÇÃO */
+
     .recovery-panel {
         top: 12%;
     }
+
+    /* PREVENÇÃO */
 
     .body-map {
         transform: scale(.72);
@@ -1065,6 +1223,8 @@ nav a:hover {
         bottom: 0;
     }
 
+    /* DESEMPENHO */
+
     .performance-form {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1074,7 +1234,12 @@ nav a:hover {
     }
 }
 
+/* =========================================================
+   RESPONSIVIDADE - CELULAR PEQUENO
+========================================================= */
+
 @media (max-width: 480px) {
+
     .cover-content h1 {
         font-size: 70px;
     }
