@@ -164,7 +164,7 @@ nav a:hover {
 .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
-        url("Cristiano.jpg");
+        url("images.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -306,7 +306,7 @@ nav a:hover {
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("Cristiano.jpg");
+        url("images.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -336,7 +336,7 @@ nav a:hover {
     top: 0;
     width: 43%;
     height: 35%;
-    background: url("Cristiano.jpg") center/cover;
+    background: url("images.jpeg") center/cover;
     clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
@@ -417,7 +417,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.05)),
-        url("imagens(1).jpeg") center/cover;
+        url("images\ \(1\).jpeg") center/cover;
     clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
     display: flex;
     align-items: center;
