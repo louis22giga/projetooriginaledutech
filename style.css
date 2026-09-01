@@ -273,7 +273,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(145deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
-        url("cristiano.jpg");
+        url("Cristiano.jpg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(28% 0,100% 0,78% 100%,0 100%);
