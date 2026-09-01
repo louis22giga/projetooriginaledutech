@@ -160,7 +160,7 @@ nav a:hover {
 .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
-        url("../images/atletismo.jpg");
+        url("images.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -264,7 +264,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(145deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
-        url("../images/atleta.jpg");
+        url("images\ \(1\).jpeg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(28% 0,100% 0,78% 100%,0 100%);
@@ -288,7 +288,7 @@ nav a:hover {
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("../images/pista.jpg");
+        url("images\ \(1\).jpeg");
     background-size: cover;
     background-position: center;
 }
