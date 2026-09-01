@@ -39,6 +39,10 @@ button {
     cursor: pointer;
 }
 
+/* =====================================================
+   TEXTURA / NOISE
+===================================================== */
+
 .noise {
     position: fixed;
     inset: 0;
@@ -47,6 +51,10 @@ button {
     opacity: .045;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
+
+/* =====================================================
+   TOPO
+===================================================== */
 
 .topbar {
     position: fixed;
@@ -99,6 +107,10 @@ nav a:hover {
     font-size: 27px;
 }
 
+/* =====================================================
+   ÍNDICE LATERAL
+===================================================== */
+
 .side-index {
     position: fixed;
     right: 25px;
@@ -124,6 +136,10 @@ nav a:hover {
     color: white;
     border-left-color: var(--brown-light);
 }
+
+/* =====================================================
+   SLIDES
+===================================================== */
 
 .slide {
     position: relative;
@@ -155,16 +171,15 @@ nav a:hover {
     font: 800 13px 'Montserrat', sans-serif;
 }
 
-
 /* =====================================================
    01 — CAPA
-   IMAGEM: Cristiano.jpg
+   IMAGEM: imagem.jpeg
 ===================================================== */
 
 .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
-        url("images.jpeg");
+        url("imagem.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -282,7 +297,6 @@ nav a:hover {
     text-align: center;
 }
 
-
 /* =====================================================
    IMAGEM — ESTILO
 ===================================================== */
@@ -297,16 +311,15 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-
 /* =====================================================
    02 — INTRODUÇÃO
-   IMAGEM: Cristiano.jpg
+   IMAGEM: imagem.jpeg
 ===================================================== */
 
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("images.jpeg");
+        url("imagem.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -336,7 +349,7 @@ nav a:hover {
     top: 0;
     width: 43%;
     height: 35%;
-    background: url("images.jpeg") center/cover;
+    background: url("imagem.jpeg") center/cover;
     clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
@@ -386,10 +399,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-
 /* =====================================================
    03 — NUTRIÇÃO
-   IMAGEM: imagens(1).jpeg
+   IMAGEM: imagem (1).jpeg
 ===================================================== */
 
 .topic-slide {
@@ -417,7 +429,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.05)),
-        url("images\ \(1\).jpeg") center/cover;
+        url("imagem (1).jpeg") center/cover;
     clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
     display: flex;
     align-items: center;
@@ -482,10 +494,9 @@ nav a:hover {
     font-size: 9px;
 }
 
-
 /* =====================================================
    04 — HIDRATAÇÃO
-   NÃO ALTERADO
+   IMAGEM: imagem.jpeg
 ===================================================== */
 
 .hydration-slide {
@@ -497,7 +508,7 @@ nav a:hover {
     inset: 0;
     background:
         linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.48)),
-        url("../images/hidratacao.jpg") center/cover;
+        url("imagem.jpeg") center/cover;
 }
 
 .hydration-shape {
@@ -591,10 +602,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-
 /* =====================================================
    05 — RECUPERAÇÃO
-   IMAGEM: ney.webp
+   IMAGEM: ney.jpeg
 ===================================================== */
 
 .recovery-slide {
@@ -609,7 +619,7 @@ nav a:hover {
     height: 100%;
     background:
         linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,.8)),
-        url("ney.webp") center/cover;
+        url("ney.jpeg") center/cover;
     clip-path: polygon(0 0,85% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
@@ -655,10 +665,9 @@ nav a:hover {
     font-weight: 700;
 }
 
-
 /* =====================================================
    06 — PREVENÇÃO
-   IMAGEM: futebol.jpeg
+   IMAGEM: futebol.jpg
 ===================================================== */
 
 .prevention-slide {
@@ -670,7 +679,7 @@ nav a:hover {
     inset: 0;
     background:
         linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.5)),
-        url("futebol.jpeg") center/cover;
+        url("futebol.jpg") center/cover;
 }
 
 .prevention-content {
@@ -775,16 +784,15 @@ nav a:hover {
     height: 70%;
     background:
         linear-gradient(0deg, rgba(0,0,0,.75), transparent),
-        url("futebol.jpeg") center/cover;
+        url("futebol.jpg") center/cover;
     clip-path: polygon(18% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
 }
 
-
 /* =====================================================
    07 — DESEMPENHO
-   NÃO ALTERADO
+   IMAGEM: imagem.jpeg
 ===================================================== */
 
 .performance-slide {
@@ -796,7 +804,7 @@ nav a:hover {
     inset: 0;
     background:
         linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.72)),
-        url("../images/treino.jpg") center/cover;
+        url("imagem.jpeg") center/cover;
 }
 
 .performance-content {
@@ -920,7 +928,6 @@ nav a:hover {
     font: 700 25px/1 'Barlow Condensed';
 }
 
-
 /* =====================================================
    MODAL
 ===================================================== */
@@ -970,9 +977,8 @@ nav a:hover {
     font-size: 30px;
 }
 
-
 /* =====================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE — TABLET
 ===================================================== */
 
 @media (max-width: 900px) {
@@ -996,6 +1002,9 @@ nav a:hover {
     }
 }
 
+/* =====================================================
+   RESPONSIVIDADE — CELULAR
+===================================================== */
 
 @media (max-width: 700px) {
 
@@ -1032,6 +1041,8 @@ nav a:hover {
         min-height: 850px;
     }
 
+    /* CAPA */
+
     .cover-content {
         left: 7%;
         top: 43%;
@@ -1051,6 +1062,8 @@ nav a:hover {
     .cover-shape.shape-a {
         width: 60%;
     }
+
+    /* INTRODUÇÃO */
 
     .split-title {
         top: 30%;
@@ -1072,6 +1085,8 @@ nav a:hover {
         width: 84%;
     }
 
+    /* IMAGENS DAS SEÇÕES */
+
     .topic-image,
     .recovery-photo,
     .prevention-image {
@@ -1081,6 +1096,8 @@ nav a:hover {
         top: auto;
         bottom: 0;
     }
+
+    /* CONTEÚDO */
 
     .topic-content,
     .recovery-panel,
@@ -1100,17 +1117,25 @@ nav a:hover {
         font-size: 70px;
     }
 
+    /* NUTRIÇÃO */
+
     .topic-cards {
         flex-wrap: wrap;
     }
+
+    /* HIDRATAÇÃO */
 
     .hydration-shape {
         width: 60%;
     }
 
+    /* RECUPERAÇÃO */
+
     .recovery-panel {
         top: 12%;
     }
+
+    /* PREVENÇÃO */
 
     .body-map {
         transform: scale(.72);
@@ -1123,6 +1148,8 @@ nav a:hover {
         bottom: 0;
     }
 
+    /* DESEMPENHO */
+
     .performance-form {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1132,6 +1159,9 @@ nav a:hover {
     }
 }
 
+/* =====================================================
+   RESPONSIVIDADE — CELULAR PEQUENO
+===================================================== */
 
 @media (max-width: 480px) {
 
