@@ -155,14 +155,16 @@ nav a:hover {
     font: 800 13px 'Montserrat', sans-serif;
 }
 
+
 /* =====================================================
-   CAPA
+   01 — CAPA
+   IMAGEM: cristiano.jpg
 ===================================================== */
 
 .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
-        url("images.jpeg");
+        url("cristiano.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -271,7 +273,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(145deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
-        url("images.jpeg");
+        url("cristiano.jpg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(28% 0,100% 0,78% 100%,0 100%);
@@ -280,7 +282,12 @@ nav a:hover {
     text-align: center;
 }
 
-.image-note { 
+
+/* =====================================================
+   IMAGEM — ESTILO
+===================================================== */
+
+.image-note {
     padding: 9px 12px;
     background: rgba(0,0,0,.62);
     color: rgba(255,255,255,.75);
@@ -290,15 +297,16 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+
 /* =====================================================
-   INTRODUÇÃO
-   IMAGEM: images.jpg
+   02 — INTRODUÇÃO
+   IMAGEM: imagem.jpeg
 ===================================================== */
 
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("images.jpg");
+        url("imagem.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -328,7 +336,7 @@ nav a:hover {
     top: 0;
     width: 43%;
     height: 35%;
-    background: url("../images/pista.jpg") center/cover;
+    background: url("imagem.jpeg") center/cover;
     clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
@@ -378,8 +386,10 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+
 /* =====================================================
-   NUTRIÇÃO
+   03 — NUTRIÇÃO
+   IMAGEM: imagens(1).jpeg
 ===================================================== */
 
 .topic-slide {
@@ -407,7 +417,7 @@ nav a:hover {
     height: 78%;
     background:
         linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.05)),
-        url("images\ \(1\).jpeg") center/cover;
+        url("imagens(1).jpeg") center/cover;
     clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
     display: flex;
     align-items: center;
@@ -472,8 +482,10 @@ nav a:hover {
     font-size: 9px;
 }
 
+
 /* =====================================================
-   HIDRATAÇÃO
+   04 — HIDRATAÇÃO
+   NÃO ALTERADO
 ===================================================== */
 
 .hydration-slide {
@@ -579,8 +591,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
+
 /* =====================================================
-   RECUPERAÇÃO
+   05 — RECUPERAÇÃO
    IMAGEM: ney.webp
 ===================================================== */
 
@@ -642,8 +655,10 @@ nav a:hover {
     font-weight: 700;
 }
 
+
 /* =====================================================
-   PREVENÇÃO
+   06 — PREVENÇÃO
+   IMAGEM: futebol.jpeg
 ===================================================== */
 
 .prevention-slide {
@@ -655,7 +670,7 @@ nav a:hover {
     inset: 0;
     background:
         linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.5)),
-        url("../images/esporte.jpg") center/cover;
+        url("futebol.jpeg") center/cover;
 }
 
 .prevention-content {
@@ -760,14 +775,16 @@ nav a:hover {
     height: 70%;
     background:
         linear-gradient(0deg, rgba(0,0,0,.75), transparent),
-        url("../images/esporte.jpg") center/cover;
+        url("futebol.jpeg") center/cover;
     clip-path: polygon(18% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
 }
 
+
 /* =====================================================
-   DESEMPENHO
+   07 — DESEMPENHO
+   NÃO ALTERADO
 ===================================================== */
 
 .performance-slide {
@@ -903,6 +920,7 @@ nav a:hover {
     font: 700 25px/1 'Barlow Condensed';
 }
 
+
 /* =====================================================
    MODAL
 ===================================================== */
@@ -952,6 +970,7 @@ nav a:hover {
     font-size: 30px;
 }
 
+
 /* =====================================================
    RESPONSIVIDADE
 ===================================================== */
@@ -976,6 +995,7 @@ nav a:hover {
         width: 82%;
     }
 }
+
 
 @media (max-width: 700px) {
 
@@ -1111,6 +1131,7 @@ nav a:hover {
         display: none;
     }
 }
+
 
 @media (max-width: 480px) {
 
