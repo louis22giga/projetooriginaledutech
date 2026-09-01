@@ -158,11 +158,14 @@ nav a:hover {
 /* CAPA */
 
 .cover {
+  .cover {
     background:
         linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
         url("images.jpeg");
     background-size: cover;
     background-position: center;
+}
+
 }
 
 .cover::before {
@@ -288,7 +291,7 @@ nav a:hover {
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("images.jpeg");
+        url("ney.webp");
     background-size: cover;
     background-position: center;
 }
