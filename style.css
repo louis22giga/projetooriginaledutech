@@ -1,0 +1,1093 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --black: #090807;
+    --black-soft: #12100f;
+    --brown-dark: #2b1713;
+    --brown: #8f493e;
+    --brown-light: #b76455;
+    --cream: #f3eee9;
+    --white: #fff;
+    --gray: #c7c0bb;
+    --line: rgba(255,255,255,.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.noise {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    opacity: .045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 25px 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    mix-blend-mode: normal;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: .8px;
+    font-size: 15px;
+}
+
+.brand span {
+    color: var(--brown-light);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    transition: .25s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 27px;
+}
+
+.side-index {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    z-index: 90;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.side-index span {
+    width: 28px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border-left: 1px solid rgba(255,255,255,.25);
+    color: rgba(255,255,255,.35);
+    font: 700 9px 'Montserrat', sans-serif;
+}
+
+.side-index span.active {
+    color: white;
+    border-left-color: var(--brown-light);
+}
+
+.slide {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    scroll-margin-top: 1px;
+}
+
+.page-mark {
+    position: absolute;
+    bottom: 27px;
+    left: 5.5%;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.6);
+}
+
+.mini-title {
+    margin-bottom: 18px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--brown-light);
+}
+
+.section-number {
+    margin-bottom: 8px;
+    color: var(--brown-light);
+    font: 800 13px 'Montserrat', sans-serif;
+}
+
+/* CAPA */
+
+.cover {
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.48)),
+        url("../images/atletismo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(76deg, transparent 0 110px, rgba(255,255,255,.13) 111px 114px, transparent 115px 205px);
+    opacity: .35;
+}
+
+.cover-track {
+    position: absolute;
+    inset: 0;
+    border-left: 1px solid rgba(255,255,255,.18);
+    margin-left: 20%;
+}
+
+.cover-shape {
+    position: absolute;
+    background: var(--brown);
+    transform: skewX(-18deg);
+}
+
+.shape-a {
+    width: 44%;
+    height: 115%;
+    right: -10%;
+    top: -8%;
+    opacity: .88;
+}
+
+.shape-b {
+    width: 12%;
+    height: 125%;
+    right: 23%;
+    top: -12%;
+    background: var(--black);
+}
+
+.cover-content {
+    position: absolute;
+    z-index: 5;
+    left: 7.5%;
+    top: 50%;
+    transform: translateY(-45%);
+}
+
+.cover-content h1 {
+    font: 900 clamp(70px, 11vw, 170px)/.8 'Barlow Condensed', sans-serif;
+    letter-spacing: -3px;
+}
+
+.cover-content h1 span {
+    color: var(--brown-light);
+}
+
+.subtitle {
+    margin-top: 24px;
+    font-size: 17px;
+}
+
+.enter-btn {
+    margin-top: 35px;
+    padding: 13px 20px;
+    border: 1px solid rgba(255,255,255,.55);
+    background: transparent;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    transition: .25s;
+}
+
+.enter-btn span {
+    margin-left: 15px;
+    color: var(--brown-light);
+}
+
+.enter-btn:hover {
+    background: white;
+    color: black;
+}
+
+.cover-athlete {
+    position: absolute;
+    z-index: 4;
+    right: 10%;
+    bottom: 0;
+    width: 33%;
+    height: 82%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.athlete-placeholder {
+    width: 72%;
+    height: 78%;
+    background:
+        linear-gradient(145deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
+        url("../images/atleta.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(28% 0,100% 0,78% 100%,0 100%);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.image-note {
+    padding: 9px 12px;
+    background: rgba(0,0,0,.62);
+    color: rgba(255,255,255,.75);
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* INTRODUÇÃO */
+
+.split-slide {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
+        url("../images/pista.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.giant-word {
+    position: absolute;
+    left: -2%;
+    bottom: -8%;
+    color: rgba(255,255,255,.035);
+    font: 900 25vw/1 'Barlow Condensed';
+}
+
+.diagonal-panel {
+    position: absolute;
+    left: 3%;
+    top: -8%;
+    width: 23%;
+    height: 120%;
+    background: linear-gradient(130deg, #1d0f0c, var(--brown));
+    transform: skewX(-17deg);
+    opacity: .92;
+}
+
+.image-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 43%;
+    height: 35%;
+    background: url("../images/pista.jpg") center/cover;
+    clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
+    display: grid;
+    place-items: center;
+}
+
+.split-title {
+    position: absolute;
+    left: 5.5%;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 5;
+}
+
+.split-title h2,
+.topic-content h2,
+.recovery-panel h2,
+.prevention-content h2,
+.performance-content h2 {
+    font: 900 clamp(55px, 7vw, 105px)/.8 'Barlow Condensed';
+    letter-spacing: -2px;
+}
+
+.split-text {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-15%);
+    width: 34%;
+    z-index: 5;
+}
+
+.split-text p {
+    margin-bottom: 17px;
+    color: #e1dcd8;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.text-btn {
+    border: 0;
+    border-bottom: 1px solid var(--brown-light);
+    padding: 9px 0;
+    background: transparent;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* NUTRIÇÃO */
+
+.topic-slide {
+    background: #0a0807;
+}
+
+.corner-shape {
+    position: absolute;
+    background: var(--brown);
+}
+
+.top-right {
+    width: 40%;
+    height: 23%;
+    right: -4%;
+    top: 0;
+    transform: skewX(-20deg);
+}
+
+.topic-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44%;
+    height: 78%;
+    background:
+        linear-gradient(0deg, rgba(0,0,0,.65), rgba(0,0,0,.05)),
+        url("../images/alimentacao.jpg") center/cover;
+    clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic-content {
+    position: absolute;
+    left: 46%;
+    top: 22%;
+    width: 47%;
+}
+
+.topic-content h2 span,
+.recovery-panel h2 span,
+.prevention-content h2 span,
+.performance-content h2 span {
+    color: var(--brown-light);
+}
+
+.topic-content > p:not(.mini-title):not(.section-number) {
+    max-width: 500px;
+    margin-top: 25px;
+    color: #d5ceca;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.topic-cards {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.topic-card {
+    min-width: 125px;
+    padding: 20px 15px;
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(255,255,255,.025);
+    color: white;
+    text-align: left;
+    transition: .25s;
+}
+
+.topic-card:hover {
+    background: var(--brown);
+    transform: translateY(-4px);
+}
+
+.topic-card b,
+.topic-card small {
+    display: block;
+}
+
+.topic-card b {
+    font: 800 23px 'Barlow Condensed';
+}
+
+.topic-card small {
+    margin-top: 7px;
+    color: #bcb4ae;
+    font-size: 9px;
+}
+
+/* HIDRATAÇÃO */
+
+.hydration-slide {
+    background: #05090b;
+}
+
+.water-background {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.48)),
+        url("../images/hidratacao.jpg") center/cover;
+}
+
+.hydration-shape {
+    position: absolute;
+    right: -7%;
+    top: -10%;
+    width: 45%;
+    height: 120%;
+    background: var(--brown);
+    transform: skewX(-16deg);
+    opacity: .7;
+}
+
+.hydration-content {
+    position: absolute;
+    left: 7%;
+    top: 22%;
+    width: 48%;
+    z-index: 5;
+}
+
+.hydration-content h2 {
+    font: 900 clamp(65px, 9vw, 130px)/.8 'Barlow Condensed';
+}
+
+.hydration-content > p:not(.mini-title):not(.section-number) {
+    max-width: 510px;
+    margin-top: 25px;
+    color: #d3cdca;
+    font-size: 13px;
+}
+
+.water-widget {
+    width: min(570px, 100%);
+    margin-top: 35px;
+}
+
+.water-value {
+    font: 900 clamp(55px, 7vw, 95px)/1 'Barlow Condensed';
+}
+
+.water-value small {
+    font: 700 14px 'Montserrat';
+    color: var(--brown-light);
+}
+
+.water-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.water-actions button {
+    padding: 11px 18px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: transparent;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.water-actions .water-add:hover {
+    background: var(--brown);
+}
+
+.water-reset:hover {
+    background: white;
+    color: black;
+}
+
+.water-progress {
+    height: 7px;
+    margin-top: 25px;
+    background: rgba(255,255,255,.14);
+}
+
+.water-progress div {
+    width: 0;
+    height: 100%;
+    background: var(--brown-light);
+    transition: .5s;
+}
+
+.water-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    color: #99918d;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+/* RECUPERAÇÃO */
+
+.recovery-slide {
+    background: #090807;
+}
+
+.recovery-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,.8)),
+        url("../images/recuperacao.jpg") center/cover;
+    clip-path: polygon(0 0,85% 0,100% 100%,0 100%);
+    display: grid;
+    place-items: center;
+}
+
+.recovery-panel {
+    position: absolute;
+    left: 52%;
+    top: 18%;
+    width: 42%;
+}
+
+.recovery-panel > p:not(.mini-title):not(.section-number) {
+    max-width: 520px;
+    margin-top: 25px;
+    color: #d0c8c4;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.recovery-list {
+    margin-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.recovery-list label {
+    display: block;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    color: #ddd6d2;
+    font-size: 11px;
+}
+
+.recovery-list input {
+    margin-right: 12px;
+    accent-color: var(--brown-light);
+}
+
+.recovery-score {
+    margin-top: 20px;
+    color: var(--brown-light);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* PREVENÇÃO */
+
+.prevention-slide {
+    background: #0b0908;
+}
+
+.prevention-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.5)),
+        url("../images/esporte.jpg") center/cover;
+}
+
+.prevention-content {
+    position: absolute;
+    left: 6%;
+    top: 17%;
+    width: 45%;
+    z-index: 5;
+}
+
+.prevention-content > p:not(.mini-title):not(.section-number) {
+    margin-top: 22px;
+    color: #d0c8c4;
+    font-size: 12px;
+}
+
+.body-map {
+    position: relative;
+    width: 250px;
+    height: 310px;
+    margin-top: 15px;
+    margin-left: 40px;
+    background:
+        radial-gradient(circle at 50% 15%, #8d4a3f 0 20px, transparent 21px),
+        linear-gradient(#8d4a3f 0 0) center 25px/18px 125px no-repeat,
+        linear-gradient(35deg, transparent 44%, #8d4a3f 45% 52%, transparent 53%) 40px 45px/90px 90px no-repeat,
+        linear-gradient(-35deg, transparent 44%, #8d4a3f 45% 52%, transparent 53%) 120px 45px/90px 90px no-repeat,
+        linear-gradient(35deg, transparent 45%, #8d4a3f 46% 53%, transparent 54%) 70px 125px/55px 145px no-repeat,
+        linear-gradient(-35deg, transparent 45%, #8d4a3f 46% 53%, transparent 54%) 125px 125px/55px 145px no-repeat;
+    filter: drop-shadow(0 0 20px rgba(143,73,62,.3));
+}
+
+.body-part {
+    position: absolute;
+    z-index: 4;
+    width: 22px;
+    height: 22px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: var(--black);
+    color: var(--brown-light);
+    font-size: 9px;
+    transition: .2s;
+}
+
+.body-part:hover {
+    transform: scale(1.35);
+    background: var(--brown);
+    color: white;
+}
+
+.head { top: 12%; left: 46%; }
+.shoulder { top: 28%; left: 27%; }
+.knee { bottom: 24%; left: 39%; }
+.ankle { bottom: 6%; left: 59%; }
+
+.body-info {
+    position: absolute;
+    left: 310px;
+    bottom: 8px;
+    width: 230px;
+    padding: 15px;
+    border-left: 2px solid var(--brown-light);
+    background: rgba(0,0,0,.4);
+}
+
+.body-info strong,
+.body-info span {
+    display: block;
+}
+
+.body-info strong {
+    font-size: 11px;
+}
+
+.body-info span {
+    margin-top: 6px;
+    color: #aaa19c;
+    font-size: 9px;
+}
+
+.prevention-image {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 42%;
+    height: 70%;
+    background:
+        linear-gradient(0deg, rgba(0,0,0,.75), transparent),
+        url("../images/esporte.jpg") center/cover;
+    clip-path: polygon(18% 0,100% 0,100% 100%,0 100%);
+    display: grid;
+    place-items: center;
+}
+
+/* DESEMPENHO */
+
+.performance-slide {
+    background: #0b0908;
+}
+
+.performance-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.72)),
+        url("../images/treino.jpg") center/cover;
+}
+
+.performance-content {
+    position: absolute;
+    left: 7%;
+    top: 13%;
+    width: 60%;
+    z-index: 5;
+}
+
+.performance-content > p:not(.mini-title):not(.section-number) {
+    margin-top: 22px;
+    color: #d0c8c4;
+    font-size: 12px;
+}
+
+.performance-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 28px;
+    max-width: 780px;
+}
+
+.performance-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--brown-light);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.performance-form input,
+.performance-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,.2);
+    outline: 0;
+    background: rgba(0,0,0,.45);
+    color: white;
+    font-size: 11px;
+}
+
+.performance-form select option {
+    background: #111;
+}
+
+.calc-btn {
+    margin-top: 16px;
+    padding: 13px 22px;
+    border: 0;
+    background: var(--brown);
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.calc-btn:hover {
+    background: var(--brown-light);
+}
+
+.result-box {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 780px;
+    margin-top: 20px;
+}
+
+.result-box.show {
+    display: grid;
+}
+
+.result-box div {
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(0,0,0,.5);
+}
+
+.result-box small,
+.result-box strong {
+    display: block;
+}
+
+.result-box small {
+    color: #9e9691;
+    font-size: 8px;
+}
+
+.result-box strong {
+    margin-top: 7px;
+    color: var(--brown-light);
+    font: 800 27px 'Barlow Condensed';
+}
+
+.final-message {
+    position: absolute;
+    right: 6%;
+    bottom: 15%;
+    width: 25%;
+    border-left: 2px solid var(--brown-light);
+    padding-left: 20px;
+}
+
+.final-message span,
+.final-message b {
+    display: block;
+}
+
+.final-message span {
+    color: var(--brown-light);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.final-message b {
+    margin-top: 10px;
+    font: 700 25px/1 'Barlow Condensed';
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0,0,0,.78);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-window {
+    position: relative;
+    width: min(600px, 100%);
+    padding: 45px;
+    background: #171210;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+}
+
+.modal-window h3 {
+    margin-bottom: 18px;
+    font: 900 50px/.9 'Barlow Condensed';
+}
+
+.modal-window p:last-child {
+    color: #d0c7c2;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    nav {
+        gap: 10px;
+    }
+
+    .cover-athlete {
+        right: 3%;
+        width: 40%;
+    }
+
+    .topic-content {
+        left: 43%;
+        width: 52%;
+    }
+
+    .performance-content {
+        width: 82%;
+    }
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        padding: 18px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 65px;
+        right: 5%;
+        display: none;
+        width: 230px;
+        padding: 20px;
+        flex-direction: column;
+        gap: 17px;
+        background: #16110f;
+        border: 1px solid rgba(255,255,255,.15);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .side-index {
+        display: none;
+    }
+
+    .slide {
+        min-height: 850px;
+    }
+
+    .cover-content {
+        left: 7%;
+        top: 43%;
+    }
+
+    .cover-content h1 {
+        font-size: 82px;
+    }
+
+    .cover-athlete {
+        width: 65%;
+        height: 40%;
+        right: -3%;
+        bottom: 0;
+    }
+
+    .cover-shape.shape-a {
+        width: 60%;
+    }
+
+    .split-title {
+        top: 30%;
+    }
+
+    .split-title h2 {
+        font-size: 70px;
+    }
+
+    .image-panel {
+        width: 65%;
+        height: 24%;
+    }
+
+    .split-text {
+        left: 7%;
+        right: auto;
+        top: 55%;
+        width: 84%;
+    }
+
+    .topic-image,
+    .recovery-photo,
+    .prevention-image {
+        width: 100%;
+        height: 34%;
+        clip-path: none;
+        top: auto;
+        bottom: 0;
+    }
+
+    .topic-content,
+    .recovery-panel,
+    .prevention-content,
+    .performance-content,
+    .hydration-content {
+        left: 7%;
+        top: 18%;
+        width: 86%;
+    }
+
+    .topic-content h2,
+    .recovery-panel h2,
+    .prevention-content h2,
+    .performance-content h2,
+    .hydration-content h2 {
+        font-size: 70px;
+    }
+
+    .topic-cards {
+        flex-wrap: wrap;
+    }
+
+    .hydration-shape {
+        width: 60%;
+    }
+
+    .recovery-panel {
+        top: 12%;
+    }
+
+    .body-map {
+        transform: scale(.72);
+        transform-origin: left top;
+        margin-left: 0;
+    }
+
+    .body-info {
+        left: 190px;
+        bottom: 0;
+    }
+
+    .performance-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .final-message {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-content h1 {
+        font-size: 70px;
+    }
+
+    .topic-content h2,
+    .recovery-panel h2,
+    .prevention-content h2,
+    .performance-content h2,
+    .hydration-content h2 {
+        font-size: 60px;
+    }
+
+    .performance-form {
+        grid-template-columns: 1fr;
+    }
+
+    .result-box {
+        grid-template-columns: 1fr;
+    }
+}
