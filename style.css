@@ -336,7 +336,7 @@ nav a:hover {
     top: 0;
     width: 43%;
     height: 35%;
-    background: url("imagem.jpeg") center/cover;
+    background: url("Cristiano.jpg") center/cover;
     clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
     display: grid;
     place-items: center;
