@@ -273,7 +273,7 @@ nav a:hover {
     text-align: center;
 }
 
-.image-note {
+.image-note { 
     padding: 9px 12px;
     background: rgba(0,0,0,.62);
     color: rgba(255,255,255,.75);
@@ -288,7 +288,7 @@ nav a:hover {
 .split-slide {
     background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8)),
-        url("images\ \(1\).jpeg");
+        url("images.jpeg");
     background-size: cover;
     background-position: center;
 }
